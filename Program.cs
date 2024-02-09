@@ -10,6 +10,9 @@ namespace Poligon_2024A
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Unesite temena");
+            Console.WriteLine("x0=");
+
         }
     }
 }
