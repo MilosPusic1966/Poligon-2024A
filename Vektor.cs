@@ -30,5 +30,6 @@ namespace Poligon_2024A
             double SP = prva.x * druga.x + prva.y * druga.y;
             return SP;
         }
+
     }
 }

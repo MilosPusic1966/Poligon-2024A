@@ -12,11 +12,12 @@ namespace Poligon_2024A
         {
             /*Console.WriteLine("Unesite temena");
             Console.WriteLine("x0=");
-            */
+            
             Tacka A = new Tacka(3,0);
             Tacka B = new Tacka(4,-2);
             Tacka C = new Tacka(5, 0);
             Tacka D = new Tacka(4, 2);
+            
             Vektor AB = new Vektor(A, B);
             Vektor BC = new Vektor(B, C);
             Vektor CD = new Vektor(C, D);
@@ -43,6 +44,44 @@ namespace Poligon_2024A
             else
             {
                 Console.WriteLine("Nije pravilan");
+            }
+            */
+            Tacka A = new Tacka(-1, 1);
+            Tacka B = new Tacka(-1, -1);
+            Tacka C = new Tacka(1, -1);
+            Tacka D = new Tacka(1, 1);
+            Vektor AB = new Vektor(A, B);
+            double Duzina_AB = AB.duzina();
+            Vektor BC = new Vektor(B, C);
+            double Duzina_BC = BC.duzina();
+            Vektor CD = new Vektor(C, D);
+            double Duzina_CD = CD.duzina();
+            Vektor DA = new Vektor(D, A);
+            double Duzina_DA = DA.duzina();
+            Vektor AC = new Vektor(A, C);
+            double Duzina_AC = AC.duzina();
+            Vektor BD = new Vektor(B, D);
+            double Duzina_BD = BD.duzina();
+            if (Duzina_AC == Duzina_BD)
+            {
+                if (Duzina_AB == Duzina_BC && Duzina_BC==Duzina_CD && Duzina_CD == Duzina_DA && Duzina_DA == Duzina_AB)
+                {
+                    Console.WriteLine("Nije");
+                }
+                else Console.WriteLine("Jeste");
+                /*
+                if (Duzina_AB == Duzina_CD)
+                {
+                    if (Duzina_BC == Duzina_DA)
+                    {
+                        if (Duzina_AB != Duzina_BC)
+                        {
+                            Console.WriteLine("Jeste");
+                            return;
+                        }
+                    }
+                }
+                */
             }
         }
     }
