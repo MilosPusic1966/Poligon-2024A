@@ -46,6 +46,7 @@ namespace Poligon_2024A
                 Console.WriteLine("Nije pravilan");
             }
             */
+            /*
             Tacka A = new Tacka(-1, 1);
             Tacka B = new Tacka(-1, -1);
             Tacka C = new Tacka(1, -1);
@@ -81,8 +82,35 @@ namespace Poligon_2024A
                         }
                     }
                 }
-                */
+          
+            
             }
+        */
+            Tacka A = new Tacka(-1, 1);
+            Tacka B = new Tacka(-1, -1);
+            Tacka C = new Tacka(2, -1);
+            Tacka D = new Tacka(2, 1);
+            Vektor AB = new Vektor(A, B);
+            Vektor BC = new Vektor(B, C);
+            Vektor CD = new Vektor(C, D);
+            Vektor DA = new Vektor(D, A);
+            Vektor AC = new Vektor(A, C);
+            Vektor BD = new Vektor(B, D);
+
+            double S_A = Vektor.skalarni(DA, AB);
+            double S_B = Vektor.skalarni(AB, BC);
+            double S_C = Vektor.skalarni(BC, CD);
+            
+            double S_T = Vektor.skalarni(AC, BD);
+            if (S_A==0 && S_B==0 && S_C == 0)
+            {
+                if (S_T == 0)
+                {
+                    Console.WriteLine("Nije");
+                    return;
+                }
+            }
+            Console.WriteLine("Jeste");
         }
     }
 }
