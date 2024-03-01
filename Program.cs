@@ -85,7 +85,7 @@ namespace Poligon_2024A
           
             
             }
-        */
+        
             Tacka A = new Tacka(-1, 1);
             Tacka B = new Tacka(-1, -1);
             Tacka C = new Tacka(2, -1);
@@ -111,6 +111,14 @@ namespace Poligon_2024A
                 }
             }
             Console.WriteLine("Jeste");
+            */
+            Tacka A = new Tacka(1, 3);
+            Tacka B = new Tacka(3, 3);
+            Tacka C = new Tacka(2, 1);
+            Tacka D = new Tacka(2, 3);
+            Vektor AB = new Vektor(A, B);
+            Vektor CD = new Vektor(C, D);
+            Console.WriteLine(Vektor.presek(AB, CD));
         }
     }
 }

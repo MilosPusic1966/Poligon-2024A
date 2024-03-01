@@ -30,6 +30,30 @@ namespace Poligon_2024A
             double SP = prva.x * druga.x + prva.y * druga.y;
             return SP;
         }
-
+        public static double VP(Vektor a, Vektor b)
+        {
+            Tacka A = a.centriraj();
+            Tacka B = b.centriraj(); 
+            double k = A.x * B.y - A.y * B.x;
+            return k;
+        }
+        static public int SIS(Vektor a, Tacka C, Tacka D)
+        {
+            Tacka A = a.pocetak;
+            Tacka B = a.kraj;
+            Vektor AB = new Vektor(A, B);
+            Vektor AC = new Vektor(A, C);
+            Vektor AD = new Vektor(A, D);
+            double k1 = VP(AB, AC);
+            double k2 = VP(AB, AD);
+            if (k1 * k2 < 0) return 2;
+            if (k1 * k2 > 0) return 0;
+            return 1;
+        }
+        static public bool presek(Vektor a, Vektor b)
+        {
+            if (SIS(a, b.pocetak, b.kraj) * SIS(b, a.pocetak, a.kraj) > 0) return true;
+            return false;
+        }
     }
 }
