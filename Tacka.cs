@@ -19,5 +19,9 @@ namespace Poligon_2024A
         {
             return Math.Sqrt(x*x + y*y);
         }
+        public double ugao()
+        {
+            return Math.Atan2(y, x) * 180 / Math.PI;
+        }
     }
 }

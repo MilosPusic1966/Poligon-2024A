@@ -111,7 +111,7 @@ namespace Poligon_2024A
                 }
             }
             Console.WriteLine("Jeste");
-            */
+            
             Tacka A = new Tacka(3, 2);
             Tacka B = new Tacka(8, 2);
             Tacka C = new Tacka(8, 5);
@@ -138,6 +138,22 @@ namespace Poligon_2024A
             if ((uD == 0) && (uA == 0)) Susedni++;
             if ((Pravi == 2) && (Susedni == 1)) Console.WriteLine("Da");
             else Console.WriteLine("Ne");
+            */
+            Tacka A = new Tacka(4, 4);
+            Tacka B = new Tacka(-2, 2);
+            Tacka C = new Tacka(6, -2);
+            Vektor AB = new Vektor(A, B);
+            Vektor BC = new Vektor(B, C);
+            Vektor CA = new Vektor(C, A);
+            
+            double ugaoABC = 180 - Vektor.ugao(AB, BC);
+            Console.WriteLine(ugaoABC);
+
+            double ugaoBCA = 180 - Vektor.ugao(BC, CA);
+            Console.WriteLine(ugaoBCA);
+
+            double ugaoCAB = 180 - Vektor.ugao(CA, AB);
+            Console.WriteLine(ugaoCAB);
         }
     }
 }
