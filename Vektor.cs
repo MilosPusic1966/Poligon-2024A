@@ -55,5 +55,6 @@ namespace Poligon_2024A
             if (SIS(a, b.pocetak, b.kraj) * SIS(b, a.pocetak, a.kraj) > 0) return true;
             return false;
         }
+
     }
 }

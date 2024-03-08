@@ -112,13 +112,32 @@ namespace Poligon_2024A
             }
             Console.WriteLine("Jeste");
             */
-            Tacka A = new Tacka(1, 3);
-            Tacka B = new Tacka(3, 3);
-            Tacka C = new Tacka(2, 1);
-            Tacka D = new Tacka(2, 3);
+            Tacka A = new Tacka(3, 2);
+            Tacka B = new Tacka(8, 2);
+            Tacka C = new Tacka(8, 5);
+            Tacka D = new Tacka(3, 5);
             Vektor AB = new Vektor(A, B);
+            Vektor BC = new Vektor(B, C);
             Vektor CD = new Vektor(C, D);
-            Console.WriteLine(Vektor.presek(AB, CD));
+            Vektor DA = new Vektor(D, A);
+            
+            double uA = Vektor.skalarni(DA, AB);
+            double uB = Vektor.skalarni(AB, BC);
+            double uC = Vektor.skalarni(BC, CD);
+            double uD = Vektor.skalarni(CD, DA);
+
+            int Pravi = 0;
+            if ( uA== 0) Pravi++;
+            if ( uB== 0) Pravi++;
+            if ( uC== 0) Pravi++;
+            if ( uD== 0) Pravi++;
+            int Susedni = 0;
+            if ((uA == 0) && (uB == 0)) Susedni++;
+            if ((uB == 0) && (uC == 0)) Susedni++;
+            if ((uC == 0) && (uD == 0)) Susedni++;
+            if ((uD == 0) && (uA == 0)) Susedni++;
+            if ((Pravi == 2) && (Susedni == 1)) Console.WriteLine("Da");
+            else Console.WriteLine("Ne");
         }
     }
 }
